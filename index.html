@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's Website Landing Page </title>
+    <link rel="stylesheet" href="style.css" type="text/css ">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="imagem/logo_.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>I'm lovin' it<br><span>McDonald's</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta vero iusto non laudantium. Voluptatibus minus alias error aspernatur ad libero nam aperiam explicabo veritatis debitis. Suscipit odit fugiat ratione illum.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="imagem/san.png" class="starbucks">
+
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="imagem/thumb1.png" onclick="imgSlider('imagem/san.png');changeCircleColor('#57d80c')"></li>
+            <li><img src="imagem/thumb2.png" onclick="imgSlider('imagem/san2.png');changeCircleColor('#ffc700')"></li>
+            <li><img src="imagem/thumb3.png" onclick="imgSlider('imagem/san3.png');changeCircleColor('#eb1d22')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="imagem/facebook.png"></a></li>
+            <li><a href="#"><img src="imagem/twitter.png"></a></li>
+            <li><a href="#"><img src="imagem/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;  
+        }
+        function changeCircleColor (color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>
+
+
+<!-- <a href="https://www.linkedin.com/in/alessandra-vataro-murat/" target="_blank" > <img src="imagem/logo.png" class="linkedin-logo"></a>-->
